@@ -1,0 +1,771 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(245, 238, 238);
+    transition-duration: 200ms;
+}
+
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    min-height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    background: hsl(218, 28%, 13%);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, a {
+    font-family: "Raleway", sans-serif;
+}
+
+p, input, button, .link a {
+    font-family: "Open Sans", sans-serif;
+}
+
+.feat1, .feat2, .feat3{
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    align-self: center;
+    opacity: 0
+}
+
+/*========================= NAVBAR =========================*/
+
+nav {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-brand {
+    height: 25px;
+}
+
+.nav-brand:hover {
+    cursor: pointer;
+}
+
+.nav-brand img {
+    padding-left: 1rem;
+    max-height: 100%;
+    object-fit: fill;
+}
+
+.nav-items ul {
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+}
+
+.nav-items ul li a {
+    display: block;
+    padding-inline: 1rem;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: rgb(214, 202, 202);
+}
+
+.nav-links a:hover {
+    color: rgb(233, 225, 225);
+}
+
+.nav-scrolled {
+    height: 60px;
+    background-color: hsl(217, 28%, 15%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    z-index: 2;
+    font-size: 15px;
+}
+
+.nav-scrolled .nav-brand {
+    height: 24px;
+}
+
+/*========================= HERO SECTION =========================*/
+
+.hero-section {
+    padding-top: 100px;
+    height: 400px;
+    background-color: hsl(217, 28%, 15%);
+    background-image: url("./images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.hero-section .container {
+    margin-inline: 5%;
+    text-align: center;
+}
+
+.hero-section .container > * {
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    line-height: 50px;
+    padding: 4% 0; 
+}
+
+.hero-section .container p {
+    font-size: 1.2em;
+    line-height: 30px;
+}
+
+button {
+    z-index: 1;
+    margin: 3% 0;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    background-image: linear-gradient(95deg,hsl(176deg 68% 64%) 0%,hsl(180deg 64% 59%) 6%,
+                                    hsl(184deg 66% 56%) 13%,hsl(187deg 68% 54%) 23%,
+                                    hsl(190deg 68% 51%) 35%,hsl(192deg 67% 50%) 51%,
+                                    hsl(195deg 64% 50%) 72%,hsl(198deg 60% 50%) 100%);
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    transition-duration: 500ms;
+    margin-bottom: 100px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transform: scale(0.95);
+}
+
+/*========================= FEATURES SECTION =========================*/
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    justify-items: center;
+    align-content: center;
+    grid-gap: 100px;
+    padding-top: 25em;
+    text-align: center;
+    opacity: 0;
+}
+
+.feature-el {
+    padding-inline: 40px;
+}
+
+.feature-el img {
+    margin-bottom: 40px;
+}
+
+.feature-el h2 {
+    padding-bottom: 20px;
+}
+
+/*========================= PRODUCTIVE SECTION =========================*/
+
+.productive {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5em;
+    height: 600px;
+    opacity: 0
+}
+
+.image {
+    width: 80%;
+    margin-bottom: 3em;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.pr-text {
+    text-align: left;
+    padding-inline: 2em;
+}
+
+.pr-text h2 {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.pr-text p {
+    line-height: 1.5em;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 3px;
+    border-bottom: 1.5px solid hsl(176, 68%, 64%);
+    width: 168px;
+}
+
+.link a {
+    color: hsl(176, 68%, 64%);
+}
+
+.link:hover {
+    border-bottom: 1.5px solid hsl(180, 45%, 74%);
+}
+
+.link a:hover {
+    color: hsl(180, 45%, 74%);
+}
+
+.link {
+    cursor: pointer;
+}
+
+/*========================= TESTIMONIAL SECTION =========================*/
+
+.testimonials {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 40px;
+    padding: 20% 10% 12% 10%;
+    height: 800px;
+}
+
+.card {
+    background-color: hsl(217, 28%, 15%);
+    border-radius: 5px;
+    padding: 50px 25px 0 25px;
+    box-sizing: border-box;
+    height: 220px;
+    box-shadow: hsl(218, 28%, 13%) 0px 5px 15px;
+    opacity: 0;
+}
+
+.profile {
+    display: flex;
+    margin: 5% 0;
+}
+
+.profile img {
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.profile-text p {
+    width: 100%;
+}
+
+/*========================= NEWSLETTER SECTION =========================*/
+
+.newsletter-section {
+    height: 300px;
+    position: relative;
+}
+
+.newsletter {
+    width: 90%;
+    background-color: hsl(217, 28%, 15%);
+    height: 380px;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    width: 90%;
+    position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.newsletter h3 {
+    font-size: 1.7em;
+    padding: 10px 0;
+}
+
+.newsletter p {
+    font-size: 1em;
+    width: 80%;
+    margin: 2% auto;
+}
+
+.input-section {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-inline: 3%;
+    padding: 1em;
+}
+
+.input-section input {
+    margin-top: 2em;
+    padding-left: 20px;
+    outline: none;
+    color: hsl(218, 28%, 13%);
+    font-size: 1em;
+}
+
+.input-section > * {
+    border-radius: 50px;
+    height: 50px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*========================= FOOTER SECTION =========================*/
+
+footer { 
+    height: 100%;
+    min-width: 100%;
+    background-color: hsl(216, 53%, 9%);
+    padding: 13em 2em 5em 2em;
+    align-self: flex-end;
+    box-sizing: border-box;
+}
+
+footer .container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    height: 80%;
+    gap: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.branding {
+    flex-basis: 100%;
+    height: 60%;
+}
+
+.branding img:nth-child(1) {
+    margin-bottom: 40px; 
+}
+
+.brand-text {
+    display: flex;
+}
+
+.brand-text img {
+    align-self: flex-start;
+    margin-right: 20px;
+}
+
+.middle {
+    flex-basis: 60%;
+    align-self: center;
+}
+
+.middle .row {
+    display: flex;
+}
+
+.middle .row:nth-child(1) {
+    margin-bottom: 15px;
+}
+
+.middle .row img{
+    align-self: center;
+    margin-right: 25px;
+}
+
+.ft-list {
+    list-style: none;
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+.part {
+    margin-top: 2em;
+}
+
+.socials {
+    flex-basis: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-self: center;
+}
+
+.socials div {
+    border: 2px solid white;;
+    height: 40px;
+    width: 40px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*========================= MEDIA QUERIES =========================*/
+
+@media (max-width: 375px) {
+    .feat1 {
+        transform: translateY(-3500%);
+    }
+}
+
+@media (max-width: 470px) {
+    .card {
+        height: 230px;
+    }
+
+    .newsletter {
+        height: 390px;
+    }
+}  
+
+@media (min-width: 700px) {
+    nav {
+        background-color: hsl(217, 28%, 15%);
+        height: 100px;
+    }
+
+    .nav-brand {
+        height: 30px;
+    }
+
+    .nav-brand img {    
+        padding-left: 2rem;
+    }
+
+    .nav-items ul {
+        padding-right: 2rem;
+    }
+
+    .nav-items ul li a {
+        font-size: 0.9em;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+        height: 550px;
+        background-image: url("./images/bg-curvy-desktop.svg");
+    }
+
+    .hero-section .container {
+        margin-inline: 10%;
+    }
+
+    .hero-section .container img {
+        height: 333px;
+        width: 430px;
+    }
+
+    .hero-section .container > * {
+        margin-bottom: 0.5em;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        padding: 2% 0; 
+    }
+
+    .hero-section .container p {
+        margin-inline: 2em;
+    }
+
+    .features {
+        padding-top: 15em;
+        grid-gap: 0;
+        row-gap: 3em;
+    }
+
+    .image {
+        width: 35%;
+    }
+
+    .productive {
+        justify-content: space-around;
+    }
+
+    .pr-text {
+        width: 40%;
+        padding-inline: 0;
+    }
+
+    .pr-text h2 {
+        text-align: left;
+        font-size: 2.5em;
+    }
+
+    .testimonials {
+        padding: 2% 10%;
+        height: 800px;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .card {
+        height: 240px;
+        width: 100%;
+    }
+
+    .newsletter {
+        height: 290px;
+    }
+
+    .newsletter h3 {
+        font-size: 2em;
+    }
+
+    .newsletter p {
+        font-size: 1em;
+    }
+
+    .input-section input {
+        width: 50%;
+        margin: 0;
+    }
+
+    .input-section button {
+        width: 40%;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    footer {
+        padding: 13em 1em 5em 1em;
+    }
+
+    footer .container {
+        width: 98%;
+    }
+
+    .branding {
+        flex-basis: 50%;
+    }
+
+    .middle {
+        flex-basis: 30%;
+        align-self: flex-end;
+    }
+
+    .ft-list {
+        flex-basis: 43%;
+        height: 160px;
+        align-self: flex-end;
+        justify-content: flex-start;
+    }
+
+    .part {
+        margin-top: 0;
+    }
+
+    .socials {
+        flex-basis: 10%;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width: 1008px) {
+    nav {
+        background-color: transparent;
+    }
+
+    .nav-brand {
+        height: 40px;
+        padding-left: 5rem;
+    }
+
+    .nav-items ul {
+        padding-right: 5rem;
+    }
+
+    .hero-section {
+        padding-top: 80px;
+    }
+
+    .hero-section .container {
+        margin-inline: 20%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        padding: 3% 0; 
+    }
+
+    .hero-section .container > * {
+        margin-bottom: 0em;
+    }
+
+    .hero-section .container p {
+        margin-inline: 3em;
+    }
+
+    .features {
+        padding-top: 12em;
+        padding-inline: 6%;
+        grid-gap: 15%;
+    }
+
+    .feature-el {
+        padding-inline: 5em;
+    }
+
+    .testimonials {
+        width: 100%;
+        padding: 0;
+        height: 300px;
+        gap: 2em;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .newsletter {
+        width: 70%;
+        height: 300px;
+    }
+
+    .newsletter h3 {
+        font-size: 2.5em;
+    }
+
+    .newsletter p {
+        font-size: 1.3em;
+    }
+
+    .input-section {
+        padding: 0;
+    }
+
+    .input-section input {
+        width: 60%;
+    }
+
+    .input-section button {
+        width: 25%;
+    }
+
+    footer {
+        padding: 8em 3em 5em 3em;
+        gap: 1em;
+    }
+
+    .branding {
+        flex-basis: 25%;
+    }
+
+    .middle {
+        flex-basis: 20%;
+        align-self: center;
+    }
+
+    .ft-list {
+        flex-basis: 20%;
+        height: 160px;
+        padding-top: 7em;
+        align-self: flex-end;
+        justify-content: flex-start;
+    }
+
+    .socials {
+        flex-basis: 10%;
+        margin: 0;
+    }
+}
+
+/*========================= ANIMATIONS =========================*/
+
+.leftToRight {
+    animation: leftToRight 1s forwards;
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-130%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.bottomToUp {
+    animation: bottomToUp 1s forwards;
+}
+
+@keyframes bottomToUp {
+    0% {
+        transform: translateY(0%);
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(5%);
+    }
+}
+
+.rightToLeft {
+    animation: rightToLeft 1s forwards;
+}
+
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(130%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.upToBottom {
+    animation: upToBottom 1s forwards;
+}
+
+@keyframes upToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(0%);
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -30%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
